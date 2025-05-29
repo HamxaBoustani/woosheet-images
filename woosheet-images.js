@@ -38,7 +38,7 @@ function getProductImageBySKU(sku) {
     // If product and its images are found, return the first image URL and cache it
     if (Array.isArray(data) && data.length > 0 && data[0].images && data[0].images.length > 0) {
       var imageUrl = data[0].images[0].src;
-      cache.put(sku, imageUrl, 1); // Cache for 6 hours (in seconds)
+      cache.put(sku, imageUrl, 21600); // Cache for 6 hours (in seconds)
       return imageUrl;
     } else {
       return "No image found";
