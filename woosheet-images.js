@@ -48,3 +48,4 @@ function getProductImageBySKU(sku) {
     return "Error fetching image";
   }
 }
+
